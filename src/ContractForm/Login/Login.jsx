@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import image from '../../../public/login.svg'
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = ({ }) => {
     const [responseMessage, setResponseMessage] = useState("");
+    //const navigate = useNavigate();
 
     const handleSignIn = async (event) => {
         event.preventDefault();
@@ -16,7 +17,7 @@ const Login = ({ }) => {
 
             email,
             password,
-        };
+        }; 
 
         try {
             const response = await fetch("https://react-interview.crd4lc.easypanel.host/api/login", {
@@ -34,9 +35,9 @@ const Login = ({ }) => {
             setResponseMessage("Login successful!");
 
             form.reset();
-            Navigate("/display-courses");
+            //navigate("/display-courses");
         } catch (error) {
-            setResponseMessage(error.message);
+            setResponseMessage("Failed to log in. Please check your credentials and try again.");
         }
 
     };
