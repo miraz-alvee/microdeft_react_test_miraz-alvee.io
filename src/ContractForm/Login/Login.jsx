@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Login = ({ }) => {
     const [responseMessage, setResponseMessage] = useState("");
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const handleSignIn = async (event) => {
         event.preventDefault();
@@ -31,11 +31,12 @@ const Login = ({ }) => {
             if (!response.ok) throw new Error("Invalid credentials");
 
             const data = await response.json();
-            localStorage.setItem("authToken", data.token);
+            localStorage.setItem("authToken", data.data.token);
+           
             setResponseMessage("Login successful!");
 
             form.reset();
-            //navigate("/display-courses");
+            navigate("/create-course");
         } catch (error) {
             setResponseMessage("Failed to log in. Please check your credentials and try again.");
         }

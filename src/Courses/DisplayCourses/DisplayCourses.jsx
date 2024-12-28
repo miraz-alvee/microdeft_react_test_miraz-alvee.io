@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const DisplayCourses = () => {
     const [courses, setCourses] = useState([]);
+    
     const [errorMessage, setErrorMessage] = useState("");
 
     useEffect(() => {
@@ -19,7 +20,8 @@ const DisplayCourses = () => {
                 if (!response.ok) throw new Error("Failed to fetch courses");
 
                 const data = await response.json();
-                setCourses(data);
+                // console.log(data)
+                setCourses(data.data.data);
             } catch (error) {
                 setErrorMessage("Error: Unable to fetch courses.");
             }
