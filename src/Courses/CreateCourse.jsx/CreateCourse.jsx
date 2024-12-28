@@ -26,19 +26,19 @@ const CreateCourse = () => {
                 },
                 body: JSON.stringify(courseData),
             });
-        
+
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.message || "Failed to create course");
             }
-        
+
             setResponseMessage("Course created successfully!");
             form.reset();
         } catch (error) {
             console.error("Error creating course:", error.message);
             setResponseMessage("Error: Unable to create course.");
         }
-        
+
     };
 
     return (

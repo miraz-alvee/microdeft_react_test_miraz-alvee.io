@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import image from '../../../public/login.svg'
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const [responseMessage, setResponseMessage] = useState("");
