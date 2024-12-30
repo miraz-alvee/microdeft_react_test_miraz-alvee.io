@@ -1,9 +1,37 @@
-# React + Vite
+# Microdeft React Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is built for the Microdeft Frontend Internship Program. It includes a login system, course creation functionality, and course display with a responsive and visually appealing design using React and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
+- **Login System**: Users can log in to receive an authentication token.
+- **Course Creation**: Users can create courses by submitting details like title, description, badge, and instructor name.
+- **Course Display**: Courses are fetched from the API and displayed as stylish cards with badges and images.
+- **Logout System**: Users can log out, which clears their session.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **React**: For building the user interface.
+- **React Router DOM**: For client-side routing.
+- **Tailwind CSS**: For responsive and modern styling.
+- **Fetch API**: For handling API requests.
+- **LocalStorage**: For storing the authentication token.
+
+## Setup Instructions
+
+### Clone the Repository
+
+git clone [https://github.com/miraz-alvee/microdeft_react_test_miraz-alvee.io]
+
+cd [project-name]
+
+to run in local machine: npm run dev
+
+
+
+ 1. `https://glittering-kheer-250963.netlify.app/` repository or live project's URL.
+
+ Ensure all dependencies are installed and APIs are tested.
+
+
+
+
 "# microdeft_react_test_miraz-alvee.io" 
